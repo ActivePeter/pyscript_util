@@ -1,8 +1,0 @@
-version: '3'
-services:
-  dev:
-    image: dev
-    container_name: dev
-    restart: always
-    ports:
-      - "25:22"

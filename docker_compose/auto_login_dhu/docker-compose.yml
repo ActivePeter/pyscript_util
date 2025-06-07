@@ -1,8 +1,0 @@
-version: '3'
-services:
-  auto_login_dhu:
-    image: auto_login_dhu
-    container_name: auto_login_dhu
-    restart: always
-    volumes:
-    - ./config.yml:/auto_login/config.yml

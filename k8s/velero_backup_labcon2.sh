@@ -1,1 +1,0 @@
-velero backup create total-labcon2-4.7 --include-namespaces=devcon
