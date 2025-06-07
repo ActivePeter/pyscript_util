@@ -1,9 +1,0 @@
-version: '3'
-services:
-  frpc:
-    image: frpc
-    container_name: frpc
-    restart: always
-    volumes:
-      - ./frpc.ini:/etc/frp/frpc.ini
-    network_mode: host
