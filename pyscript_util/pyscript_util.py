@@ -108,18 +108,6 @@ def chdir_to_cur_file():
     return current_dir
 
 
-# Convenience function for backwards compatibility
-def setup_script_environment():
-    """
-    Setup the script environment by changing to the script's directory
-    This is an alias for chdir_to_cur_file() for convenience
-    
-    Returns:
-        str: The new current working directory
-    """
-    return chdir_to_cur_file()
-
-
 if __name__ == "__main__":
     # Example usage
     print("pyscript_util - Python Script Utilities")
