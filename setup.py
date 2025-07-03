@@ -6,16 +6,18 @@ Setup script for pyscript_util - Python script utilities for maximum compatibili
 from setuptools import setup, find_packages
 import os
 
+
 # Read the contents of your README file
 def read_file(filename):
     """Read file content."""
     this_directory = os.path.abspath(os.path.dirname(__file__))
-    with open(os.path.join(this_directory, filename), encoding='utf-8') as f:
+    with open(os.path.join(this_directory, filename), encoding="utf-8") as f:
         return f.read()
+
 
 # Try to read README, fallback to basic description if not available
 try:
-    long_description = read_file('README.md')
+    long_description = read_file("README.md")
 except FileNotFoundError:
     long_description = """
     pyscript_util - Python script utilities for maximum compatibility
@@ -26,7 +28,7 @@ except FileNotFoundError:
 
 setup(
     name="pyscript_util",
-    version="0.1.0",
+    version="0.1.9",
     author="telego-project",
     author_email="",
     description="Python script utilities for maximum compatibility",
@@ -55,7 +57,7 @@ setup(
     ],
     python_requires=">=3.6",
     install_requires=[
-        # No external dependencies for maximum compatibility
+        "pyyaml>=5.1",  # YAML配置文件支持，兼容Python 3.6+
     ],
     extras_require={
         "dev": [
@@ -73,4 +75,4 @@ setup(
         "Bug Reports": "https://github.com/ActivePeter/pyscript_util/issues",
         "Source": "https://github.com/ActivePeter/pyscript_util",
     },
-) 
+)

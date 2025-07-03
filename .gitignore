@@ -1,2 +1,4 @@
 dist
 *.egg-info
+pyscript_util_offline_installer/
+__pycache__
