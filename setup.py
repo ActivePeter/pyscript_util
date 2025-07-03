@@ -28,7 +28,7 @@ except FileNotFoundError:
 
 setup(
     name="pyscript_util",
-    version="0.1.9",
+    version="0.1.11",
     author="telego-project",
     author_email="",
     description="Python script utilities for maximum compatibility",

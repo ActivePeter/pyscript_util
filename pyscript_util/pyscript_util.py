@@ -201,14 +201,10 @@ def run_root_cmd_sure(command):
     Raises:
         CommandFailedError: If the command fails (non-zero exit code)
     """
-    sudo_command = f"sudo {command}"
-    print(f"Executing root command (sure): {sudo_command}")
-    result = os.system(sudo_command)
+    result = run_root_cmd(command)
     if result != 0:
-        print(f"Root command failed with exit code: {result}")
-        print(f"Failed command: {sudo_command}")
-        raise CommandFailedError(sudo_command, result, is_root=True)
-    print(f"Root command completed successfully")
+        print(f"Root command failed with exit code: {result}, will raise exception")
+        raise CommandFailedError(command, result, is_root=True)
     return result
 
 
